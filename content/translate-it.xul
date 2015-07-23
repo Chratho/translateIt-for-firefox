@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="chrome://translateit/skin/translate-it.css" type="text/css" ?>
+
+<!-- ######## Overlay ######## -->
+<overlay id="s2k-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <!-- Commands -->
+    <keyset id="mainKeyset">
+        <key id="s2k-translate-shortcut" modifiers="alt" key="T" oncommand="$S2K.onToolbar()"/>
+    </keyset>
+
+    <!-- Pop-Up Menu -->
+    <popupset>
+        <panel id="s2k-popup" onpopupshowing="$S2K.onShowPopUp()" onpopuphiding="$S2K.onHidePopUp()">
+            <vbox id="s2k-popup-search" class="s2k-popup-item s2k-popup-item-large s2k-popup-item-first">
+		<textbox id="s2k-popup-search-input" class="s2k-popup-text" onchange="$S2K.onSearchBar()"/>                   
+	    </vbox>
+	    <vbox id="s2k-popup-result" class="s2k-popup-item s2k-popup-item-large">
+		<description id="s2k-popup-result-text" class="s2k-popup-text"/>
+	    </vbox>
+	    <vbox id="s2k-popup-copyright" class="s2k-popup-item s2k-popup-item-last s2k-popup-item-large">
+	        <description id="s2k-popup-copyright-text" class="s2k-popup-text">
+                     Powered by <label href="http://www.yandex.com" class="text-link">yandex.com</label>
+                </description>
+            </vbox>
+        </panel>
+    </popupset>
+
+    <!-- Toolbar Button -->
+    <toolbarpalette id="BrowserToolbarPalette">
+        <toolbarbutton 
+            id="s2k-button"
+            class="toolbarbutton-1 s2k-toolbarbutton" 
+            context="s2k-menu-popup"
+            label="Send to Kindle" 
+            tooltiptext="Send to Kindle"        
+            oncommand="$S2K.onToolbar()"
+        />
+    </toolbarpalette>
+    
+    <!-- Scripts -->
+    <script type="application/javascript" src="chrome://translateit/content/translate-it.js"></script>
+</overlay> 

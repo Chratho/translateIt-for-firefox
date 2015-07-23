@@ -1,0 +1,9 @@
+######## Content ########
+content translateit content/
+
+######## Skins ########
+skin translateit    default skins/
+
+######## Firefox ########
+style chrome://global/content/customizeToolbar.xul chrome://translateit/skin/translate-it.css
+overlay chrome://browser/content/browser.xul chrome://translateit/content/translate-it.xul

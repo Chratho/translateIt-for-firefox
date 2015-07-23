@@ -1,0 +1,78 @@
+.s2k-popup-item-first {
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+}
+
+.s2k-popup-item-last {
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+}
+
+toolbarbutton.s2k-toolbarbutton, window:not([active="true"]) toolbarbutton.s2k-toolbarbutton { 
+        list-style-image:url("chrome://translateit/skin/icons/ti-icon-24.png")
+}
+
+#s2k-button { 
+        -moz-image-region: rect(0,24px,24px,0)
+}
+
+toolbar[iconsize="small"] #s2k-button { 
+        list-style-image:url("chrome://translateit/skin/icons/ti-icon-16.png");
+        -moz-image-region:rect(0,16px,16px,0)
+}
+
+/* own definitions */
+
+#s2k-popup {
+        width:400px;
+        background-color:lightgrey;
+}
+
+#s2k-popup label {
+        border-bottom:2px dotted lightgrey;
+        color:lightgrey; 
+}
+
+#s2k-popup label:hover {
+        text-decoration: none;
+}
+
+/* search box */
+
+#s2k-popup-search {
+        background-color:yellow;
+}
+
+#s2k-popup-search-input {
+        -moz-appearance:none;
+        border-radius:5px;
+        border:2px dashed lightgrey;
+        margin:5px;
+}       
+
+/* result box */
+
+#s2k-popup-result {
+        background-color:white;
+        min-height:50px;
+}
+
+#s2k-popup-result-text {
+        font-family: "Courier New", monospace;
+        font-size: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+}
+
+/* copyright box */
+
+#s2k-popup-copyright {
+        background:yellow;
+}
+
+#s2k-popup-copyright-text {
+        padding-top:5px;
+        color:lightgrey;
+        text-align:right;
+        font-style:italic;
+}
